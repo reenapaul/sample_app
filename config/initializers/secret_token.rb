@@ -9,7 +9,7 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-#SampleApp::Application.config.secret_key_base = '1a2688c3692b5987d6bfd802ddc8f64f2233bd9fc0e53a5784d3de81efb041a284b8fc894df11b266b39fa1f7f2eba9538357caf836b6c0984e2b39a6a745eba'
+SampleApp::Application.config.secret_key_base = '1a2688c3692b5987d6bfd802ddc8f64f2233bd9fc0e53a5784d3de81efb041a284b8fc894df11b266b39fa1f7f2eba9538357caf836b6c0984e2b39a6a745eba'
 # Be sure to restart your server when you modify this file.
 
 # Your secret key is used for verifying the integrity of signed cookies.
@@ -36,5 +36,5 @@ def secure_token
   end
 end
 
-SampleApp::Application.config.secret_key_base = secure_token
+#SampleApp::Application.config.secret_key_base = secure_token
 
