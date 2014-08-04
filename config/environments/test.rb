@@ -33,4 +33,17 @@ SampleApp::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+  ActiveModel::SecurePassword.min_cost = true
+
+  visit signup_path
+  fill_in "Name", with: "Example User"
+fill_in "Email",        with: "user@example.com"
+fill_in "Password",     with: "foobar"
+fill_in "Confirmation", with: "foobar"
+expect do
+  click_button "Create my account"
+end.to change(User, :count).by(1)
+
+  click_button "Create my account"
+
 end
